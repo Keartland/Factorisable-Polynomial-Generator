@@ -19,6 +19,8 @@ function run(){
 		pm2 = b*d < 0 ? "−" : "+"
 		eq = a*c + "x² " + pm1 + " " + Math.abs(b*c + d*a) + "x " + pm2 + " " + Math.abs(b*d)
 		pmd = d < 0 ? "−" : "+"
+		a = a != 1 ? a : ""
+		c = c != 1 ? c : ""
 		ans = "(" + a + "x " + pmb + " " + Math.abs(b) + ")(" + c + "x " + pmd + " " + Math.abs(d) + ")"
 	}
 	document.getElementById("container").innerHTML  += "<br><b>Q"+(i +1) + ".</b><div>"+ eq +"</div><button class='ans' id=\""+i+"b\" onclick=\"document.getElementById('"+i+"b').outerHTML ='<div>"+ans+"</div>'\">Ans</button>"
