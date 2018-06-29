@@ -4,7 +4,6 @@ function run(){
 	a = Math.floor((Math.random() * scale)+1) * (Math.random() < 0.5 ? -1 : 1);
 	b = Math.floor((Math.random() * scale)+1)* (Math.random() < 0.5 ? -1 : 1);
 	c = Math.floor((Math.random() * scale)+1)* (Math.random() < 0.5 ? -1 : 1);
-	d = Math.floor((Math.random() * scale)+1)* (Math.random() < 0.5 ? -1 : 1);
 	pmb = b < 0 ? "−" : "+"
 	if (document.getElementById("checkBox").checked){
 		pm1 = (a + b + c) < 0 ? "−" : "+"
@@ -15,6 +14,7 @@ function run(){
 		pmc = c < 0 ? "−" : "+"
 		ans = "(x " + pma + " " + Math.abs(a) + ")(x " + pmb + " " + Math.abs(b) + ")(x " + pmc	 + " " + Math.abs(c) + ")"
 	} else {
+		d = Math.floor((Math.random() * scale)+1)* (Math.random() < 0.5 ? -1 : 1);
 		pm1 = (b*c + d*a) < 0 ? "−" : "+"
 		pm2 = b*d < 0 ? "−" : "+"
 		eq = a*c + "x² " + pm1 + " " + Math.abs(b*c + d*a) + "x " + pm2 + " " + Math.abs(b*d)
